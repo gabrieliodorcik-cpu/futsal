@@ -1,91 +1,586 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PaginaWeb</title>
-  <style>
-    img {
-    width: 80px;
-    height: 80px;
-    }
-    header {
-    background-color: #183C63;
-    color: #FFFFFF;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 16px;
-    }
-    main {
-    background-color: #FFFFFF;
-    color: #183C63;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 16px;
-    }
-    article {
-    display: flex;
-    }
-    div p {
-    font-weight: bold;
-    }
-    .artigo-autor {
-    font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Futsal</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #EAF2F8;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #183C63;
+        }
+
+        header {
+            background-color: #183C63;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        main {
+            background-color: #FFFFFF;
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        article {
+            display: flex;
+            gap: 20px;
+            padding: 25px 0;
+            border-bottom: 1px solid #D6E2EC;
+            align-items: flex-start;
+        }
+
+        article:last-child {
+            border-bottom: none;
+        }
+
+        .imagem {
+            min-width: 150px;
+            width: 150px;
+            height: 120px;
+            background-color: #183C63;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 50px;
+        }
+
+        article div {
+            flex: 1;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #183C63;
+            font-size: 26px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            color: #3975A8;
+            margin-bottom: 15px;
+        }
+
+        .posicoes {
+            padding-left: 20px;
+        }
+
+        .posicoes li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+            color: #333333;
+        }
+
+        button {
+            background-color: #EAF2F8;
+            border: 1px solid #C4D7E6;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin-right: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #D6EAF8;
+            transform: scale(1.05);
+        }
+
+        footer {
+            max-width: 900px;
+            margin: 0 auto 25px auto;
+            background-color: #183C63;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            border-radius: 15px;
+        }
+
+        footer p {
+            color: white;
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            main {
+                margin: 15px;
+                padding: 18px;
+            }
+
+            article {
+                flex-direction: column;
+            }
+
+            .imagem {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-  <header>
-<h1>PaginaWeb</h1>
-<p>Modelo de Protótipo</p>
-</header>
-<main>
-  <article>
-<img src="  " alt=" Primeira Imagem ">
 
-<div>
-<h2>Primeiro tópico ou item da pesquisa</h2>
-<p class="artigo-autor">Por: Nome do Aluno </p>
-<p>Paragrafo com as informações esquisadas</p>
-<button>❤️<span>0</span></button>
-<button>👍<span>0</span></button>
-</div>
-  </article>
-  <article>
-<img src="  " alt=" Segunda Imagem  ">
+    <header>
 
-<div>
-<h2>Segundo Tópico ou  assunto da pesquisa</h2>
-<p class="artigo-autor">Por: Nome do Aluno</p>
-<p>Paragrafo com as informações pesquisadas</p>
-<button>❤️<span>0</span></button>
-<button>👍<span>0</span></button>
-</div>
-  </article>
-</main>
+        <h1>⚽ FUTSAL</h1>
+
+        <p>
+            Conheça a história, as características e a importância
+            de um dos esportes mais populares do Brasil.
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- INTRODUÇÃO -->
+
+        <article>
+
+            <div class="imagem">
+                ⚽
+            </div>
+
+            <div>
+
+                <h2>Introdução</h2>
+
+                <p class="artigo-autor">
+                    Por: Gabrieli
+                </p>
+
+                <p>
+                    O futsal é um esporte coletivo praticado em uma quadra,
+                    sendo uma das modalidades esportivas mais populares do Brasil.
+                    É parecido com o futebol, mas possui regras, espaço e
+                    características próprias.
+                </p>
+
+                <p>
+                    O jogo é conhecido pela velocidade das jogadas, pelos
+                    passes rápidos e pela necessidade de muita habilidade e
+                    concentração dos jogadores.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+
+        <!-- HISTÓRIA -->
+
+        <article>
+
+            <div class="imagem">
+                🏆
+            </div>
+
+            <div>
+
+                <h2>História do futsal</h2>
+
+                <p class="artigo-autor">
+                    Por: Gabrieli
+                </p>
+
+                <p>
+                    O futsal surgiu na América do Sul durante o século XX.
+                    Existem diferentes versões sobre sua origem, mas o esporte
+                    se desenvolveu principalmente no Brasil e no Uruguai.
+                </p>
+
+                <p>
+                    Inicialmente, era conhecido como futebol de salão e era
+                    praticado em espaços menores, como quadras e ginásios.
+                    Com o passar dos anos, o esporte ganhou novas regras e
+                    se espalhou por diversos países.
+                </p>
+
+                <p>
+                    O Brasil teve grande importância nesse processo,
+                    tornando-se uma das principais referências mundiais
+                    do futsal e formando muitos jogadores de destaque.
+                </p>
+
+                <p>
+                    Atualmente, o futsal é praticado tanto de forma recreativa
+                    quanto profissional, possuindo competições para diferentes
+                    idades e categorias.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+
+        <!-- REGRAS -->
+
+        <article>
+
+            <div class="imagem">
+                📋
+            </div>
+
+            <div>
+
+                <h2>Regras e funcionamento</h2>
+
+                <p class="artigo-autor">
+                    Por: Gabrieli
+                </p>
+
+                <p>
+                    Uma partida de futsal é disputada entre duas equipes,
+                    com cinco jogadores de cada lado em quadra, sendo um
+                    deles o goleiro. As equipes podem fazer substituições
+                    durante o jogo.
+                </p>
+
+                <p>
+                    O objetivo é marcar gols na equipe adversária.
+                    Nas regras oficiais, a partida é dividida em dois
+                    tempos de 20 minutos de tempo efetivo.
+                </p>
+
+                <p>
+                    A quadra é menor que um campo de futebol, fazendo com
+                    que os jogadores fiquem mais próximos e as jogadas
+                    aconteçam rapidamente. Existem regras específicas para
+                    faltas, laterais, escanteios, tiros livres e outras
+                    situações do jogo.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+
+        <!-- POSIÇÕES -->
+
+        <article>
+
+            <div class="imagem">
+                👥
+            </div>
+
+            <div>
+
+                <h2>Posições dos jogadores</h2>
+
+                <p class="artigo-autor">
+                    Por: Gabrieli
+                </p>
+
+                <ul class="posicoes">
+
+                    <li>
+                        <strong>Goleiro:</strong>
+                        responsável por defender o gol.
+                    </li>
+
+                    <li>
+                        <strong>Fixo:</strong>
+                        atua principalmente na defesa e ajuda
+                        na organização da equipe.
+                    </li>
+
+                    <li>
+                        <strong>Ala:</strong>
+                        joga pelos lados da quadra e participa
+                        do ataque e da defesa.
+                    </li>
+
+                    <li>
+                        <strong>Pivô:</strong>
+                        atua mais próximo do gol adversário,
+                        ajudando a criar e finalizar jogadas.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Apesar das posições, os jogadores precisam participar
+                    tanto do ataque quanto da defesa e se movimentar
+                    constantemente durante a partida.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+
+        <!-- CARACTERÍSTICAS -->
+
+        <article>
+
+            <div class="imagem">
+                ⚡
+            </div>
+
+            <div>
+
+                <h2>Características do futsal</h2>
+
+                <p class="artigo-autor">
+                    Por: Gabrieli
+                </p>
+
+                <p>
+                    O futsal é um esporte que exige velocidade, agilidade,
+                    técnica e raciocínio rápido. Como o espaço da quadra
+                    é menor, os jogadores precisam tomar decisões em pouco tempo.
+                </p>
+
+                <p>
+                    O trabalho em equipe também é fundamental. Os atletas
+                    precisam trocar passes, criar espaços, marcar os
+                    adversários e se movimentar de forma organizada.
+                </p>
+
+                <p>
+                    Outra característica marcante é a intensidade.
+                    As partidas podem mudar rapidamente, pois uma recuperação
+                    de bola pode resultar em um ataque ou até mesmo em um gol
+                    em poucos segundos.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+
+        <!-- BENEFÍCIOS -->
+
+        <article>
+
+            <div class="imagem">
+                💪
+            </div>
+
+            <div>
+
+                <h2>Benefícios da prática</h2>
+
+                <p class="artigo-autor">
+                    Por: Gabrieli
+                </p>
+
+                <p>
+                    A prática do futsal ajuda a melhorar o condicionamento
+                    físico, a coordenação motora, a agilidade, a velocidade
+                    e a resistência.
+                </p>
+
+                <p>
+                    Além dos benefícios físicos, o esporte também pode
+                    ajudar no desenvolvimento da disciplina, da concentração
+                    e do trabalho em equipe.
+                </p>
+
+                <p>
+                    Por ser uma modalidade coletiva, o futsal também
+                    proporciona convivência e interação entre os jogadores.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+
+        <!-- FUTSAL FEMININO -->
+
+        <article>
+
+            <div class="imagem">
+                👧⚽
+            </div>
+
+            <div>
+
+                <h2>Futsal feminino</h2>
+
+                <p class="artigo-autor">
+                    Por: Gabrieli
+                </p>
+
+                <p>
+                    O futsal é praticado tanto por homens quanto por mulheres.
+                    O futsal feminino vem ganhando cada vez mais espaço e
+                    participação em diferentes categorias.
+                </p>
+
+                <p>
+                    A presença das mulheres na modalidade é importante para
+                    aumentar as oportunidades esportivas e incentivar meninas
+                    e jovens a praticarem o esporte.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+
+        <!-- CONCLUSÃO -->
+
+        <article>
+
+            <div class="imagem">
+                ❤️
+            </div>
+
+            <div>
+
+                <h2>Conclusão</h2>
+
+                <p class="artigo-autor">
+                    Por: Gabrieli
+                </p>
+
+                <p>
+                    O futsal é um esporte dinâmico que combina técnica,
+                    velocidade, estratégia e trabalho em equipe. Sua história
+                    está bastante ligada ao Brasil, que possui uma grande
+                    tradição na modalidade.
+                </p>
+
+                <p>
+                    Além de proporcionar benefícios para a saúde, o futsal
+                    pode contribuir para o desenvolvimento de habilidades
+                    sociais e pessoais.
+                </p>
+
+                <p>
+                    Por ser rápido e imprevisível, também é um esporte que
+                    consegue despertar o interesse de quem pratica e de quem
+                    acompanha.
+                </p>
+
+                <p>
+                    Dessa forma, o futsal se destaca como uma modalidade
+                    importante no esporte brasileiro e continua conquistando
+                    novos jogadores e torcedores.
+                </p>
+
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            ⚽ Trabalho de Computação — Futsal
+        </p>
+
+        <p>
+            Desenvolvido por Gabrieli
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function(botao) {
+
+            let curtiu = false;
+
+            botao.addEventListener("click", function() {
+
+                let texto = botao.querySelector("span");
+
+                if (curtiu === false) {
+
+                    texto.textContent =
+                        Number(texto.textContent) + 1;
+
+                    curtiu = true;
+
+                } else {
+
+                    texto.textContent =
+                        Number(texto.textContent) - 1;
+
+                    curtiu = false;
+
+                }
+
+            });
+
+        });
+
+    </script>
+
 </body>
-  <script>
-  const botoes = document.querySelectorAll("button");
-  botoes.forEach(function(botao) { 
-  let curtiu = false;
-  
-  botao.addEventListener("click", botaoClicado);
- 
-  function botaoClicado() {
-  console.log("fui clicado");
-  let texto = botao.querySelector("span");
- 
-  if (curtiu === false) {
-  texto.textContent++;
-  curtiu = true;
-  } else {
-  texto.textContent--;
-  curtiu = false;
-    }
-  }
-  });
-  </script>
+
 </html>
